@@ -16,6 +16,21 @@
 ## Limites do MVP (fora do escopo)
 Pagamento/gateway, videochamada, envio automático de e-mail/WhatsApp/SMS de lembrete (o cliente recebe o link na tela e a equipe pode reemitir), sincronização com Google/Outlook, lista de espera, pacotes e recorrência.
 
+## Começar em 1 minuto (com Claude Code ou Codex)
+
+1. Abra o **Claude Code** (ou o Codex) numa pasta vazia do seu computador.
+2. Copie o link deste repositório e cole no chat com o pedido abaixo:
+
+```text
+Instale o Agendamento Online: https://github.com/pack-25-sistemas-ia/agendamento-online
+Clone numa pasta nova e siga o guia .claude/commands/instalar.md. Explique cada passo e me pergunte quando precisar de algo meu.
+```
+
+3. Pronto: o agente clona, instala, sobe o banco local, carrega os dados de demonstração e abre o sistema. Depois da primeira vez, dentro da pasta, basta digitar `/instalar` no Claude Code para refazer ou consertar a instalação.
+
+Prefere fazer à mão? Os passos manuais estão logo abaixo.
+
+
 ## Pré-requisitos
 Node 22+, pnpm 12, Docker (Supabase local e `pnpm test:db`), conta Supabase **na região de São Paulo** para produção, hospedagem Node (ex.: Vercel).
 
