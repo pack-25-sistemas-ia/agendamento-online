@@ -98,7 +98,7 @@ begin
             -- no futuro: a maioria pendente/confirmada; poucos cancelados
             if startat >= now() and st = 'cancelled' and h % 7 <> 0 then st := 'confirmed'; end if;
             -- operação real: o primeiro atendimento dos últimos dias de cada profissional ainda está «confirmado» (falta registrar a conclusão)
-            if d between -5 and -1 and not pend and st <> 'cancelled' and startat + make_interval(mins => s.duration_minutes) < now() then st := 'confirmed'; pend := true; end if;
+            if d between -4 and -1 and not pend and st <> 'cancelled' and startat + make_interval(mins => s.duration_minutes) < now() then st := 'confirmed'; pend := true; end if;
             src := case when h % 9 < 4 then 'public' else 'admin' end;
             insert into public.schedule_entries (organization_id, professional_id, kind, occupied_start_at, occupied_end_at, active) values (org, p.id, 'appointment', os, oe, st <> 'cancelled') returning id into ent;
             insert into public.appointments (organization_id, schedule_entry_id, professional_id, customer_id, service_id, starts_at, ends_at, status, source, service_name_snapshot, duration_minutes_snapshot,
