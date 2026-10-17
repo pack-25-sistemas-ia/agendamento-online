@@ -1,0 +1,12 @@
+node_modules/
+.next/
+next-env.d.ts
+*.tsbuildinfo
+.env*
+!.env.example
+playwright-report/
+test-results/
+coverage/
+
+# Supabase CLI: estado local
+supabase/.temp/

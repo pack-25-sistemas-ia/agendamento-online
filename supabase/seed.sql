@@ -1,0 +1,2 @@
+-- Intencionalmente sem dados. Nenhum usuário nem credencial é criado por `supabase db reset`.
+-- Para a empresa de DEMONSTRAÇÃO (fictícia), rode depois: node scripts/seed-demo.mjs  (senha aleatória exibida só no seu terminal).
